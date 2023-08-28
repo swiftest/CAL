@@ -7,7 +7,7 @@ Here is the bibliography info:
 <br/>
 
 ```jason
-@article{wang2023CAL,  
+@article{Wang2023CAL,  
   title={Collaborative Active Learning based on Improved Capsule Networks for Hyperspectral Image Classification},  
   author={Wang, Heng and Wang, Liguo},  
   journal={IEEE Transactions on Geoscience and Remote Sensing},  
