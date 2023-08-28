@@ -24,22 +24,33 @@ Here is the bibliography info:
 
 
 ## Descriptions
-In this article, we develop a novel regularized spectral-spatial global learning (RSSGL) framework. Compared with SSDGL, the proposed framework mainly makes three improvements.
+In this paper, we propose a CAL framework based on improved capsule networks for HIC. The proposed CAL framework includes two excellent base classifiers and a CAL scheme that considers both the diversity of actively selected samples and the cost of expert annotation. The first base classifier is CapsNet combined with ViT, which is named CapsViT. By introducing ViT, CapsViT can better learn the global correlation between various primary capsules and improve classification performance.
 
-<img src="figure/fig1.png" height="600"/>
+<img src="figure/CapsViT.png" height="600"/>
 
-Fig1. Overall architecture of the proposed RSSGL. Given a full hyperspectral dataset of size H x W x B, where B indicates the number of spectral bands, the unified standardized input feature map is passed through 3-D ConvLSTM to learn the short-range and long-range cross-channel dependencies and global spatial context features. Then, abundant spectral-spatial features are extracted through GJAM and group normalization (GN) is used to correct the inaccurate batch statistics estimation. Finally, the softmax layer is used for classification, and cross-entropy combined with statistical loss are used for error backward propagation.  
+Fig1. The proposed CapsViT for HIC. The actual training process is carried out in mini-batches, for the sake of demonstration, only one sample is taken here as an example.  
 
+The second base classifier is designed based on the improved GLOM system and named CapsGLOM. Instead of using the pre-assigned universal capsule to learn the multi-level embeddings at various positions, CapsGLOM borrows from the way CapsNet builds primary capsules and lets the network learn these embeddings itself.
 
-<img src="figure/fig2.png" height="400"/>
+<img src="figure/CapsGLOM.png" height="600"/>
 
-Fig2. The architecture of the 3-D ConvLSTM.  
+Fig2. The proposed CapsGLOM for HIC. The actual training process is carried out in mini-batches, for the sake of demonstration, only one sample is taken here as an example.  
 
-<img src="figure/fig3.png" height="417"/>
+AL experiments on four benchmark HSI data sets show that our proposed CapsViT and CapsGLOM can obtain good or even the best classification performance on the initial training set, which puts the way for the subsequent active selection of the most informative samples. At the same time, the proposed CAL framework is flexible, and any excellent deep model can be used to replace either of the two base classifiers we designed, as long as it can handle samples with the same form (dimension). In addition, compared with advanced deep models, out proposed CapsViT and CapsGLOM can obtain very competitive results in supervised classification experiments on four data sets.
 
-Fig3. The architecture of the 3-D ConvLSTMCell.  
+The proposed CAL scheme not only considers the uncertainty and diversity of actively selected samples, but also takes into account the cost of expert labeling.
 
-Compared with SSDGL, the proposed framework mainly makes three improvements. Above all, aiming at the problem that the GCL module used in SSDGL cannot fully tap the local spectral dependence, we apply 3-D convolution to the gated units of long short-term memory (LSTM) as an alternative to the GCL module for adjacent and non-adjacent spectral dependencies learning. Furthermore, to extract the most discriminative features, an improved statistical loss regularization term is developed, in which we introduce a simple but effective diversity-promoting condition to make it more reasonable and suitable for deep metric learning in HSI classification. Finally, to effectively address the performance oscillation caused by the H-B sampling strategy, the proposed framework adopts an early stopping strategy to save and restore the optimal model parameters, making it more flexible and stable.
+<img src="figure/CAL_Scheme.png" height="417"/>
+ 
+The output of PrimaryCaps layer and ViT module for the 13 7 × 7 training samples (KSC data set) are shown in Fig.9 and Fig.10, respectively. By comparing Fig.9 and Fig.10, we can find that the output of the PrimaryCaps layer is relatively discrete, which only focus on the location and probability of the occurrence of various features, while the output of the ViT module is more uniform, and some features will become more obvious after considering the global correlation between all features.
+
+<img src="figure/Caps_Outputs.png" height="600"/>
+
+Fig9. Visualization of the PrimaryCaps layer output in CapsViT for the KSC data set. Each dot represents a capsule feature, and the size of the dot indicates the probability of occurrence of the entity feature. (a)-(m) Features of 13 7 × 7 training samples.
+
+<img src="figure/ViT_Outputs.png" height="600"/>
+
+Fig10. Visualization of the ViT module output in CapsViT for the KSC data set. Each dot represents a capsule feature, and the size of the dot indicates the probability of occurrence of the entity feature. (a)-(m) Features of 13 7 × 7 training samples.
 
 ## Results  
 
