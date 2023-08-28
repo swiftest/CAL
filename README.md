@@ -18,7 +18,7 @@ Here is the bibliography info:
 ```
 
 ## Steps:
-- Place the target data set into the dataset folder.
+1. Place the target data set into the dataset folder.
 - Make sure the GPU accelerator is available.
 - Run Caps-GLOM.ipynb in the Jupyter environment (ensure that external modules such as einops and torchsummary are installed).
 
