@@ -7,12 +7,12 @@ Here is the bibliography info:
 <br/>
 
 ```jason
-@article{wang2022RSSGL,  
-  title={RSSGL: Statistical Loss Regularized 3-D ConvLSTM for Hyperspectral Image Classification},  
-  author={Wang, Liguo and Wang, Heng and Wang, Lifeng and Wang, Xiaoyi and Shi, Yao and Cui, Ying},  
+@article{wang2023CAL,  
+  title={Collaborative Active Learning based on Improved Capsule Networks for Hyperspectral Image Classification},  
+  author={Wang, Heng and Wang, Liguo},  
   journal={IEEE Transactions on Geoscience and Remote Sensing},  
-  year={2022},  
-  DOI (identifier)={10.1109/TGRS.2022.3174305},  
+  year={2023},  
+  DOI (identifier)={10.1109/TGRS.2023.3309269},  
   publisher={IEEE}  
 }
 ```
