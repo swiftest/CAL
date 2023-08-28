@@ -40,7 +40,7 @@ AL experiments on four benchmark HSI data sets show that our proposed CapsViT an
 
 The proposed CAL scheme not only considers the uncertainty and diversity of actively selected samples, but also takes into account the cost of expert labeling.
 
-<img src="figure/CAL_Scheme.png" height="417"/>
+<img src="figure/CAL_Scheme.png" height="600"/>
  
 The output of PrimaryCaps layer and ViT module for the 13 7 × 7 training samples (KSC data set) are shown in Fig.9 and Fig.10, respectively. By comparing Fig.9 and Fig.10, we can find that the output of the PrimaryCaps layer is relatively discrete, which only focus on the location and probability of the occurrence of various features, while the output of the ViT module is more uniform, and some features will become more obvious after considering the global correlation between all features.
 
