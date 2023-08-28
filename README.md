@@ -36,7 +36,7 @@ The second base classifier is designed based on the improved GLOM system and nam
 
 Fig2. The proposed CapsGLOM for HIC. The actual training process is carried out in mini-batches, for the sake of demonstration, only one sample is taken here as an example.  
 
-AL experiments on four benchmark HSI data sets show that our proposed CapsViT and CapsGLOM can obtain good or even the best classification performance on the initial training set, which puts the way for the subsequent active selection of the most informative samples. At the same time, the proposed CAL framework is flexible, and any excellent deep model can be used to replace either of the two base classifiers we designed, as long as it can handle samples with the same form (dimension). In addition, compared with advanced deep models, out proposed CapsViT and CapsGLOM can obtain very competitive results in supervised classification experiments on four data sets.
+AL experiments on four benchmark HSI data sets show that our proposed CapsViT and CapsGLOM can obtain good or even the best classification performance on the initial training set, which puts the way for the subsequent active selection of the most informative samples. At the same time, the proposed CAL framework is flexible, and any excellent deep model can be used to replace either of the two base classifiers we designed, as long as it can handle samples with the same form (dimension). In addition, compared with advanced deep models, out proposed CapsViT and CapsGLOM can obtain very competitive results in supervised classification experiments on four data sets. In addition, compared with advanced deep models, out proposed CapsViT and CapsGLOM can obtain very competitive results in supervised classification experiments on four data sets.
 
 The proposed CAL scheme not only considers the uncertainty and diversity of actively selected samples, but also takes into account the cost of expert labeling.
 
@@ -52,23 +52,6 @@ Fig9. Visualization of the PrimaryCaps layer output in CapsViT for the KSC data 
 
 Fig10. Visualization of the ViT module output in CapsViT for the KSC data set. Each dot represents a capsule feature, and the size of the dot indicates the probability of occurrence of the entity feature. (a)-(m) Features of 13 7 × 7 training samples.
 
-## Results  
-
-### Indian Pines (IP) Data Set  
-<img src="figure/IP_RSSGL.png" height="407"/> 
-
-Fig.4  The IP data set classification result (OA: 96.73±0.095(%); AA: 97.60±0.111(%); Kappa: 0.9628±0.001) of RSSGL using fixed 5% samples for training (SEED=2333).
-
-### Salinas (SA) Data Set 
-<img src="figure/SA_RSSGL.png" height="407"/> 
-
-Fig.5  The SA data set classification result (OA: 99.81±0.040(%); AA: 99.79±0.053(%); Kappa: 0.9980±0.000) of RSSGL using fixed 1% samples for training (SEED=2333).
-
-### University of Pavia (PU) Data Set 
-<img src="figure/UP_RSSGL.png" height="407"/> 
-
-Fig.6  The PU data set classification result (OA: 99.47±0.080(%); AA: 99.12±0.252(%); Kappa: 0.9930±0.001) of RSSGL using fixed 1% samples for training (SEED=2333).
-
 ## Acknowledgement
 
-Part of codes is from a wonderful implementation of SSDGL by [Qiqi Zhu](https://github.com/dengweihuan/SSDGL).
+The authors would like to thank the Editor, Associate Editor, and anonymous reviewers for their helpful comments and suggestions that improved this article.
