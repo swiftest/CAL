@@ -18,9 +18,9 @@ Here is the bibliography info:
 ```
 
 ## Steps:
-- 1. Run 'bash setup_script.sh' to download the data sets. Then, put the data sets and the ground truth into the corresponding folders.
-- 2. Unizp the 'simplecv.zip' into your PYTHONPATH, or move the unzipped module to the 'site-packages' path.
-- 3. Run 'bash ./scripts/....sh' to reproduce the experiments presented in the Paper.
+- 1. Place the target data set into the dataset folder.
+- 2. Make sure the GPU accelerator is available.
+- 3. Run Caps-GLOM.ipynb in the Jupyter environment (ensure that external modules such as einops and torchsummary are installed).
 
 
 ## Descriptions
