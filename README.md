@@ -55,16 +55,16 @@ Fig10. Visualization of the ViT module output in CapsViT for the KSC data set. E
 ## Result
 
 ### Kennedy Space Center (KSC) Data Set
-The KSC data set classification result (CapsViT: OA: 98.96±0.42(%); AA: 98.18±0.70(%); Kappa: 0.9844±0.005; CapsGLOM: OA: 98.74±0.38(%); AA: 97.85±0.63(%); Kappa: 0.9859±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
+The KSC data set classification results (CapsViT: OA: 98.96±0.42(%); AA: 98.18±0.70(%); Kappa: 0.9844±0.005; CapsGLOM: OA: 98.74±0.38(%); AA: 97.85±0.63(%); Kappa: 0.9859±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
 
 ### Houston University 2013 (HU2013) Data Set
-The HU2013 data set classification result (CapsViT: OA: 98.05±0.21(%); AA: 97.81±0.34(%); Kappa: 0.9789±0.002; CapsGLOM: OA: 98.16±0.35(%); AA: 98.15±0.49(%); Kappa: 0.9801±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
+The HU2013 data set classification results (CapsViT: OA: 98.05±0.21(%); AA: 97.81±0.34(%); Kappa: 0.9789±0.002; CapsGLOM: OA: 98.16±0.35(%); AA: 98.15±0.49(%); Kappa: 0.9801±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
 
 ### Pavia University (PU) Data Set
-The PU data set classification result (CapsViT: OA: 98.79±0.22(%); AA: 97.75±0.39(%); Kappa: 0.9839±0.003; CapsGLOM: OA: 98.79±0.24(%); AA: 97.73±0.58(%); Kappa: 0.9839±0.003) of CapsViT and CapsGLOM using random 2% samples for training.
+The PU data set classification results (CapsViT: OA: 98.79±0.22(%); AA: 97.75±0.39(%); Kappa: 0.9839±0.003; CapsGLOM: OA: 98.79±0.24(%); AA: 97.73±0.58(%); Kappa: 0.9839±0.003) of CapsViT and CapsGLOM using random 2% samples for training.
 
 ### Chikusei Data Set
-The Chikusei data set classification result (CapsViT: OA: 98.76±0.31(%); AA: 98.69±0.52(%); Kappa: 0.9856±0.004; CapsGLOM: OA: 98.77±0.25(%); AA: 98.72±0.21(%); Kappa: 0.9858±0.003) of CapsViT and CapsGLOM using random 30 samples per-class for training.
+The Chikusei data set classification results (CapsViT: OA: 98.76±0.31(%); AA: 98.69±0.52(%); Kappa: 0.9856±0.004; CapsGLOM: OA: 98.77±0.25(%); AA: 98.72±0.21(%); Kappa: 0.9858±0.003) of CapsViT and CapsGLOM using random 30 samples per-class for training.
 
 ## Acknowledgement
 
