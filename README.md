@@ -55,7 +55,7 @@ Fig10. Visualization of the ViT module output in CapsViT for the KSC data set. E
 ## Result
 
 ### Kennedy Space Center (KSC) Data Set
-The KSC data set classification results (CapsViT: OA: 98.96±0.42(%); AA: 98.18±0.70(%); Kappa: 0.9844±0.005; CapsGLOM: OA: 98.74±0.38(%); AA: 97.85±0.63(%); Kappa: 0.9859±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
+The KSC data set classification results [CapsViT: OA: 98.96±0.42(%); AA: 98.18±0.70(%); Kappa: 0.9844±0.005; CapsGLOM: OA: 98.74±0.38(%); AA: 97.85±0.63(%); Kappa: 0.9859±0.004] of CapsViT and CapsGLOM using random 10% samples for training.
 
 ### Houston University 2013 (HU2013) Data Set
 The HU2013 data set classification results (CapsViT: OA: 98.05±0.21(%); AA: 97.81±0.34(%); Kappa: 0.9789±0.002; CapsGLOM: OA: 98.16±0.35(%); AA: 98.15±0.49(%); Kappa: 0.9801±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
