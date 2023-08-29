@@ -28,13 +28,13 @@ In this paper, we propose a CAL framework based on improved capsule networks for
 
 <img src="figure/CapsViT.png" height="600"/>
 
-Fig1. The proposed CapsViT for HIC. The actual training process is carried out in mini-batches, for the sake of demonstration, only one sample is taken here as an example.  
+Fig1. The proposed CapsViT for HIC.
 
 The second base classifier is designed based on the improved GLOM system and named CapsGLOM. Instead of using the pre-assigned universal capsule to learn the multi-level embeddings at various positions, CapsGLOM borrows from the way CapsNet builds primary capsules and lets the network learn these embeddings itself.
 
 <img src="figure/CapsGLOM.png" height="600"/>
 
-Fig2. The proposed CapsGLOM for HIC. The actual training process is carried out in mini-batches, for the sake of demonstration, only one sample is taken here as an example.  
+Fig2. The proposed CapsGLOM for HIC.
 
 AL experiments on four benchmark HSI data sets show that our proposed CapsViT and CapsGLOM can obtain good or even the best classification performance on the initial training set, which puts the way for the subsequent active selection of the most informative samples. At the same time, the proposed CAL framework is flexible, and any excellent deep model can be used to replace either of the two base classifiers we designed, as long as it can handle samples with the same form (dimension). In addition, compared with advanced deep models, out proposed CapsViT and CapsGLOM can obtain very competitive results in supervised classification experiments on four data sets. In addition, compared with advanced deep models, out proposed CapsViT and CapsGLOM can obtain very competitive results in supervised classification experiments on four data sets.
 
@@ -55,16 +55,20 @@ Fig10. Visualization of the ViT module output in CapsViT for the KSC data set. E
 ## Result
 
 ### Kennedy Space Center (KSC) Data Set
+
 The KSC data set classification results [CapsViT: OA: 98.96±0.42(%); AA: 98.18±0.70(%); Kappa: 0.9844±0.005; CapsGLOM: OA: 98.74±0.38(%); AA: 97.85±0.63(%); Kappa: 0.9859±0.004] of CapsViT and CapsGLOM using random 10% samples for training.
 
 ### Houston University 2013 (HU2013) Data Set
-The HU2013 data set classification results (CapsViT: OA: 98.05±0.21(%); AA: 97.81±0.34(%); Kappa: 0.9789±0.002; CapsGLOM: OA: 98.16±0.35(%); AA: 98.15±0.49(%); Kappa: 0.9801±0.004) of CapsViT and CapsGLOM using random 10% samples for training.
+
+The HU2013 data set classification results [CapsViT: OA: 98.05±0.21(%); AA: 97.81±0.34(%); Kappa: 0.9789±0.002; CapsGLOM: OA: 98.16±0.35(%); AA: 98.15±0.49(%); Kappa: 0.9801±0.004] of CapsViT and CapsGLOM using random 10% samples for training.
 
 ### Pavia University (PU) Data Set
-The PU data set classification results (CapsViT: OA: 98.79±0.22(%); AA: 97.75±0.39(%); Kappa: 0.9839±0.003; CapsGLOM: OA: 98.79±0.24(%); AA: 97.73±0.58(%); Kappa: 0.9839±0.003) of CapsViT and CapsGLOM using random 2% samples for training.
+
+The PU data set classification results [CapsViT: OA: 98.79±0.22(%); AA: 97.75±0.39(%); Kappa: 0.9839±0.003; CapsGLOM: OA: 98.79±0.24(%); AA: 97.73±0.58(%); Kappa: 0.9839±0.003] of CapsViT and CapsGLOM using random 2% samples for training.
 
 ### Chikusei Data Set
-The Chikusei data set classification results (CapsViT: OA: 98.76±0.31(%); AA: 98.69±0.52(%); Kappa: 0.9856±0.004; CapsGLOM: OA: 98.77±0.25(%); AA: 98.72±0.21(%); Kappa: 0.9858±0.003) of CapsViT and CapsGLOM using random 30 samples per-class for training.
+
+The Chikusei data set classification results [CapsViT: OA: 98.76±0.31(%); AA: 98.69±0.52(%); Kappa: 0.9856±0.004; CapsGLOM: OA: 98.77±0.25(%); AA: 98.72±0.21(%); Kappa: 0.9858±0.003] of CapsViT and CapsGLOM using random 30 samples per-class for training.
 
 ## Acknowledgement
 
