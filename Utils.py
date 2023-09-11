@@ -44,35 +44,36 @@ def accuracy(output, target, topk=(1,)):
     return res, target, pred.squeeze()
 
 
-# test model
 def test_epoch(model, test_loader):
     tar = np.array([]).astype('int')
     pre = np.array([]).astype('int')
-    for batch_idx, (batch_data, batch_target) in enumerate(test_loader):
-        batch_data = batch_data.cuda()
-        batch_target = batch_target.cuda()
-        
-        batch_pred, _ = model(batch_data)  # (batch, 13, 16)
-        batch_pred = safe_norm(batch_pred, axis=-1)  # (batch, 13)
-        _, pred = batch_pred.topk(1, axis=1)  # (100, 1)
-        pp = pred.squeeze()  # (100, )
-        
-        tar = np.append(tar, batch_target.data.cpu().numpy())
-        pre = np.append(pre, pp.data.cpu().numpy())
+    with torch.no_grad():
+        for batch_idx, (batch_data, batch_target) in enumerate(test_loader):
+            batch_data = batch_data.cuda()
+            batch_target = batch_target.cuda()
+            
+            batch_pred, _ = model(batch_data)  # (batch, 13, 16)
+            batch_pred = safe_norm(batch_pred, axis=-1)  # (batch, 13)
+            _, pred = batch_pred.topk(1, axis=1)  # (100, 1)
+            pp = pred.squeeze()  # (100, )
+            
+            tar = np.append(tar, batch_target.data.cpu().numpy())
+            pre = np.append(pre, pp.data.cpu().numpy())
     return tar, pre
 
 
 def valid_epoch(model, true_loader):
     pre = np.array([]).astype('int')
-    for batch_idx, (batch_data, batch_target) in enumerate(true_loader):
-        batch_data = batch_data.cuda()
-        batch_target = batch_target.cuda()
-        
-        batch_pred, _ = model(batch_data)  # (100, 13, 16)
-        batch_pred = safe_norm(batch_pred, axis=-1)  # (100, 13)
-        _, pred = batch_pred.topk(1, axis=1)  # (100, 1)
-        pp = pred.squeeze()  # (100, )
-        pre = np.append(pre, pp.data.cpu().numpy())
+    with torch.no_grad():
+        for batch_idx, (batch_data, batch_target) in enumerate(true_loader):
+            batch_data = batch_data.cuda()
+            batch_target = batch_target.cuda()
+            
+            batch_pred, _ = model(batch_data)  # (100, 13, 16)
+            batch_pred = safe_norm(batch_pred, axis=-1)  # (100, 13)
+            _, pred = batch_pred.topk(1, axis=1)  # (100, 1)
+            pp = pred.squeeze()  # (100, )
+            pre = np.append(pre, pp.data.cpu().numpy())
     return pre  # (100, )
 
 
