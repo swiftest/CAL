@@ -77,7 +77,6 @@ def valid_epoch(model, true_loader):
     return pre  # (100, )
 
 
-# train model
 def train_epoch(model, train_loader, criterion, optimizer):
     objs = AverageMeter()
     top1 = AverageMeter()
