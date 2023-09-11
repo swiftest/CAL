@@ -76,7 +76,6 @@ def accuracy(output, target, topk=(1,)):
     return res, target, pred.squeeze()
 
 
-# test model
 def test_epoch(models, test_loader):
     tar = np.array([]).astype('int')
     pre = np.array([]).astype('int')
@@ -110,7 +109,6 @@ def valid_epoch(models, true_loader):
     return pre  # (100, )
 
 
-# train model
 def train_epoch(models, train_loader, criterion, optimizers):
     objs_target = AverageMeter()
     top1 = AverageMeter()
