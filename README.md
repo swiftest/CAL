@@ -13,7 +13,8 @@ Here is the bibliography info:
   journal={IEEE Transactions on Geoscience and Remote Sensing},  
   year={2023},
   volume={61},
-  DOI (identifier)={10.1109/TGRS.2023.3309269},  
+  pages={1-26},
+  doi={10.1109/TGRS.2023.3309269},  
   publisher={IEEE}  
 }
 ```
