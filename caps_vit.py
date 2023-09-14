@@ -325,7 +325,7 @@ class CapsViT(nn.Module):
                                            kernel_size=3)
         
         padding = int((kernel_size - 1) / 2)  # 1
-        spatial_size = patch_size - kernel_size + 1  # 5
+        spatial_size = patch_size - kernel_size + 1  # 7
         caps1_caps = caps1_num * spatial_size ** 2  # 784
         self.vit = ViT(caps_num=caps1_caps, caps_dim=caps1_dim, depth=5, heads=4, mlp_dim=8, dropout=0.1, 
                        emb_dropout = 0.1, mode=mode)
