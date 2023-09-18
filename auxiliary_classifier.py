@@ -244,7 +244,7 @@ class GLOM(nn.Module):
             nn.Linear(sub_patch_size ** 2 * in_channels, dim), nn.LayerNorm(dim), nn.GELU()
         )
         self.image_to_levels = nn.Sequential(
-            nn.Conv2d(in_channels, levels*dim, 1), nn.GELU(),   # (batch, 5*64, 9, 9)
+            nn.Conv2d(in_channels, levels*dim, 1), nn.GELU(),   # (batch, 5*32, 9, 9)
             Rearrange('b (l d) h w -> b (h w) l d', d=dim), nn.LayerNorm(dim)
         )
         
