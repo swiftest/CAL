@@ -342,8 +342,8 @@ class CapsGLOM(nn.Module):
         x = self.preliminary_layer(x)  # (64, 96, 9, 9)
         x = self.convgru(x)  # (64, 48, 9, 9)
         x = self.group_normalization(x)  # (64, 48, 9, 9)
-        levels = self.glom(x)  # (batch, 81, 5, 16)
-        top_level = self.to_latent(levels[:, :, -1])  # (batch, 81, 16)
+        levels = self.glom(x)  # (batch, 81, 5, 32)
+        top_level = self.to_latent(levels[:, :, -1])  # (batch, 81, 32)
         x = self.conv1d(top_level)
         output = self.mlp_head(x.squeeze())
         return output
