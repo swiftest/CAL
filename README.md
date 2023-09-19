@@ -1,7 +1,7 @@
 # CAL
 Collaborative Active Learning based on Improved Capsule Networks for Hyperspectral Image Classification
 
-Code download link: [CAL](https://github.com/swiftest/CAL/archive/refs/heads/main.zip).
+Code download link: [CAL code](https://github.com/swiftest/CAL/archive/refs/heads/main.zip).
 
 Here is the bibliography info:
 <br/>
