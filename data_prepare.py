@@ -4,7 +4,7 @@ import numpy as np
 def choose_train_and_test_proportion(groundtruth, proportion_per_class, seed):
     rs = np.random.RandomState(seed)
     # when conducting supervised classification experiments, the “seed” parameter should be removed and above line code should be commented. 
-    # In addition, the code on line 18 should be changed to np.random.shuffle(each_class).
+    # In addition, the code on line 19 should be changed to np.random.shuffle(each_class).
     num_classes = np.max(groundtruth)
     number_train = []
     pos_train = {}
