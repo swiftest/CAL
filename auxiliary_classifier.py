@@ -27,7 +27,8 @@ class eca_layer(nn.Module):
         super(eca_layer, self).__init__()
         self.avg_pool = nn.AdaptiveAvgPool3d(1)
         self.conv = nn.Conv2d(1, 1, kernel_size=k_size, padding=(k_size - 1) // 2, bias=False)
-        self.sigmoid = nn.Sigmoid()   
+        self.sigmoid = nn.Sigmoid()  
+        
     def forward(self, x):
         # x: input features with shape [b, c, d, h, w]
         b, c, h, w, t = x.size()
@@ -67,6 +68,7 @@ class Residual(nn.Module):
         # start and end block initialization
         self.start_block = start_block
         self.end_block = end_block
+    
     def forward(self, X):
         identity = X
         if self.start_block:
